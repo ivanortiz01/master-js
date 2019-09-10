@@ -1,0 +1,46 @@
+
+{{fecha | date: 'dd/MM/yy' }} <br />
+{{fecha | date: 'fullDate' | uppercase }} <br />
+{{ 'HOLA MUNDO USANDO PIPES' | lowercase }} <br />
+{{ 4 | calculadora: 2 }}
+
+<hr />
+
+<h2>Crear Usuario</h2>
+
+<form #newUserF="ngForm" (ngSubmit)="onSubmit(newUserF)">
+    <p>
+        <label for="name">Nombre:</label>
+        <input type="text" required name="name" #name="ngModel" [(ngModel)]="newUser.name" />
+        <span *ngIf="name.touched && !name.valid">Nombre no es valido</span>
+    </p>
+
+    <p>
+        <label for="job">Trabajo:</label>
+        <input type="text" required name="job" #job="ngModel" [(ngModel)]="newUser.job" />
+        <span *ngIf="job.touched && !job.valid">Trabajo no es valido</span>
+    </p>
+
+    <input type="submit" value="Guardar Usuario" [disabled]="!newUserF.form.valid"/>
+</form>
+
+<div *ngIf="saveUser">
+    <h2>Usuario se ha guardado correctamente.</h2>
+    <h3>{{saveUser.id}}</h3>
+    <h4>{{saveUser.name}}</h4>
+    <h4>{{saveUser.job}}</h4>
+</div>
+
+<hr />
+
+<input type="text" [(ngModel)]="userID" (keyup.enter)="cargaUsuario()" />
+
+<div *ngIf="!user">
+    Cargando...
+</div>
+
+<div *ngIf="user">
+    <img src="{{user.avatar}}" width="200px" />
+    <h2>{{user.first_name + "  " + user.last_name}}</h2>
+</div>
+

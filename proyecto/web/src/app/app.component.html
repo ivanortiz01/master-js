@@ -1,0 +1,25 @@
+<header>
+    <ul>
+        <li>
+            <a [routerLink]="['/sobre-mi']" [routerLinkActive]="['active']">Sobre Mi</a>
+        </li>
+        <li>
+            <a [routerLink]="['/proyectos']" [routerLinkActive]="['active']">Proyectos</a>
+        </li>
+        <li id="logo"><a href="#">IO</a></li>
+        <li>
+            <a [routerLink]="['/crear-proyecto']" [routerLinkActive]="['active']">Crear Proyecto</a>
+        </li>
+        <li>
+            <a [routerLink]="['/contacto']" [routerLinkActive]="['active']">Contacto</a>
+        </li>
+    </ul>
+</header>
+
+<section id="content">
+    <router-outlet></router-outlet>
+</section>
+
+<footer>
+    Master en Javascript de ivanortiz.wordpress.com &copy;
+</footer>

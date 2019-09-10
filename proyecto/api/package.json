@@ -1,0 +1,29 @@
+{
+  "name": "api-rest-node-js",
+  "version": "1.0.0",
+  "description": "api rest del master javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivanortiz01/learn-nodejs.git"
+  },
+  "author": "Ivan Ortiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivanortiz01/learn-nodejs/issues"
+  },
+  "homepage": "https://github.com/ivanortiz01/learn-nodejs#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-multiparty": "^2.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.12"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}

@@ -1,0 +1,65 @@
+<h2>{{titulo}}</h2>
+
+<p>Añadir Marca:</p>
+<p>
+    <input type="text" [(ngModel)]="mi_marca" (blur)="onBlur()" (keyup.enter)="onEnter()" />
+    <button (click)="getMarca()">Mostrar Marca</button>
+    <button (click)="addMarca()">Añadir Marca</button>
+</p>
+
+<p><strong>{{mi_marca}}</strong></p>
+
+<hr/>
+
+<p>Compra las zapatillas de las mejores marcas</p>
+<ul>
+    <li *ngFor="let marca of marcas; let indice = index">{{indice + " - " + marca}}
+        <button (click)="borrarMarca(indice)">Borrar</button>
+    </li>
+</ul>
+
+<hr/>
+
+<p>Las zapatillas que tenemos disponibles son:</p>
+<ul>
+    <li *ngFor="let zap of zapatillas">
+        <span [ngStyle]="{
+                    'text-decoration': !zap.stock ? 'line-through': 'none'
+                }">
+            {{zap.nombre}} - 
+            <strong [class.altoPrecio]="zap.precio > 80"
+                [ngClass]="{
+                    'fondoRojo': zap.precio> 100, 
+                    'subrayado': zap.marca == 'Nike'
+                }">
+                {{zap.precio}} USD
+            </strong>
+        </span>
+
+        <span *ngIf="zap.precio <= 80" [style.background]="zap.precio <= 80 ? 'green': 'transparent'"
+            [style.color]="zap.precio <= 80 ? 'white': 'black'">
+            ¡EN OFERTA!
+        </span>
+    </li>
+</ul>
+
+<hr/>
+
+<p>El color de la mayoria de nuestras zapatillas es:</p>
+
+<input type="text" [(ngModel)]="color" />
+
+<ul [ngSwitch]="color">
+    <li *ngSwitchCase="'yellow'">
+        El color predominante es el <span [ngStyle]=" { 'background': color }">amarillo</span>.
+    </li>
+    <li *ngSwitchCase="'red'">
+        El color predominante es el <span [ngStyle]=" { 'background': color }">rojo</span>.
+    </li>
+    <li *ngSwitchCase="'blue'">
+        El color predominante es el <span [ngStyle]=" { 'background': color }">azul</span>.
+    </li>
+    <li *ngSwitchCase="'orange'">
+        El color predominante es el <span [ngStyle]=" { 'background': color }">naranja</span>.
+    </li>
+</ul>
