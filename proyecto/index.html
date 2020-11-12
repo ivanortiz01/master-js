@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Proyecto con Javascript</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+    <link id="theme" rel="stylesheet" type="text/css" media="screen" href="css/green.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Slider https://bxslider.com/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <!-- Moments JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/locale/es.js"></script>
+
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div id="selector-theme">
+        <div id="to-green"></div>
+        <div id="to-red"></div>
+        <div id="to-blue"></div>
+    </div>
+
+    <section id="global">
+        <header>
+            <div id="logo">
+                <h1>Proyecto Js</h1>
+            </div>
+
+            <div class="clearFix"></div>
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="reloj.html">RELOJ</a></li>
+                    <li><a href="about.html">SOBRE MI</a></li>
+                    <li><a href="contact.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="slider">
+            <div class="slider">
+                <div><img src="img/hojas.jpg" title="Hojas" /></div>
+                <div><img src="img/rojo.jpg" title="Rojo" /></div>
+                <div><img src="img/cielo.jpg" title="Cielo" /></div>
+            </div>
+        </div>
+
+        <section id="content">
+            <div id="posts">
+            </div>
+
+            <aside id="sidebar">
+                <div id="about">
+                    <h4><span>¿Quien soy?</span></h4>
+                    <img src="img/caracol.jpg" />
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae sem molestie,
+                        ullamcorper est quis
+                    </p>
+                </div>
+
+                <div id="login">
+                    <h4><span>Identificate</span></h4>
+
+                    <form method="POST">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="form_name" name="name" />
+
+                        <label for="name">Correo:</label>
+                        <input type="email" id="form_email" name="email" />
+
+                        <label for="name">Contraseña:</label>
+                        <input type="password" id="form_password" name="password" />
+
+                        <input type="submit" value="Ingresar" />
+                    </form>
+                </div>
+            </aside>
+
+            <div class="clearFix"></div>
+        </section>
+    </section>
+
+    <footer>
+        Master de Javascript &copy;
+
+        <a href="#" class="subir">Ir arriba</a>
+    </footer>
+</body>
+
+</html>

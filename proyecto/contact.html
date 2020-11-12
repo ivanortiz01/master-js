@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Proyecto con Javascript</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+    <link id="theme" rel="stylesheet" type="text/css" media="screen" href="css/green.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
+    <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css" />
+    <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.structure.min.css" />
+    <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.theme.min.css" />
+    <script type="text/javascript" src="libs/jquery-ui/jquery-ui.min.js"></script>
+
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div id="selector-theme">
+        <div id="to-green"></div>
+        <div id="to-red"></div>
+        <div id="to-blue"></div>
+    </div>
+
+    <section id="global">
+        <header>
+            <div id="logo">
+                <h1>Proyecto Js</h1>
+            </div>
+
+            <div class="clearFix"></div>
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="reloj.html">RELOJ</a></li>
+                    <li><a href="about.html">SOBRE MI</a></li>
+                    <li><a href="contact.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="content">
+            <div id="box">
+                <h2>Contacto</h2>
+
+                <form action="" method="POST" id="formContact">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" data-validation="alphanumeric" />
+
+                    <label for="surname">Apellidos</label>
+                    <input type="text" name="surname" data-validation="alphanumeric" />
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" data-validation="email" />
+
+                    <label for="sex">Sexo</label>
+                    <select name="sex" data-validation="required">
+                        <option value="men">Hombre</option>
+                        <option value="women">Mujer</option>
+                    </select>
+
+                    <label for="date">Fecha Nacimiento</label>
+                    <input type="text" name="date" data-validation="date" data-validation-format="dd-mm-yyyy"/>
+
+                    <label for="years">Edad</label>
+                    <input type="number" name="years" data-validation="number" />
+
+                    <input type="submit" value="Enviar" />
+                </form>
+            </div>
+
+            <aside id="sidebar">
+                <div id="about">
+                    <h4><span>¿Quien soy?</span></h4>
+                    <img src="img/caracol.jpg" />
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae sem molestie,
+                        ullamcorper est quis
+                    </p>
+                </div>
+
+                <div id="login">
+                    <h4><span>Identificate</span></h4>
+
+                    <form method="POST">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="form_name" name="name" />
+
+                        <label for="name">Correo:</label>
+                        <input type="email" id="form_email" name="email" />
+
+                        <label for="name">Contraseña:</label>
+                        <input type="password" id="form_password" name="password" />
+
+                        <input type="submit" value="Ingresar" />
+                    </form>
+                </div>
+            </aside>
+
+            <div class="clearFix"></div>
+        </section>
+    </section>
+
+    <footer>
+        Master de Javascript &copy;
+
+        <a href="#" class="subir">Ir arriba</a>
+    </footer>
+</body>
+
+</html>
